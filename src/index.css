@@ -126,9 +126,19 @@ input:focus {
 }
 
 .num-display {
-  position: absolute;
+  position: relative;
   top: -10px;
   left: -10px;
+}
+
+.text-display {
+  position: relative;
+  background-color: white;
+  color: black;
+  width: 700px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .close,
@@ -185,18 +195,16 @@ input:focus {
   color: rebeccapurple;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
 .about-link {
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
-.about-link a {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
   color: #fff;
   cursor: pointer;
+}
+
+.about-link a {
+  color: #fff;
 }
 
 .about-link a:hover {
