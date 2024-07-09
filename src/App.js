@@ -1,28 +1,46 @@
 import React from 'react';
-import { useState } from 'react';
+// import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
+// import { Link } from 'react-router-dom';
+// import { BrowserRouter as Router } from 'react-router-dom';
+
+// import { useState } from 'react';
 import Header from './components/Header';
 import FeedbackList from './components/FeedBackList';
-import FeedbackData from './data/FeedBackdata';
-import { Card } from './components/shared/Card';
+// import Data from './data/FeedBackdata';
+import Feedbackstats from './components/Feedbackstats';
+import FeedbackForm from './components/FeedbackForm';
+import AboutIconLink from './components/AboutIconLink';
+import Post from './components/Post';
+import {FeedbackProvider} from './context/FeedbackContext';
+
+
 function App(){
 
-    const [Feedbackdata,SetFeedBackdata] = useState(FeedbackData);
-    const deleteFeedBack = (id) =>{
-        console.log(id);
-        if(window.confirm("Are you sure you wantt to delete the post ?")){
-            SetFeedBackdata(Feedbackdata.filter((item)=> item.id !== id));
-        }
-    }
+    // const [Feedbackdata,SetFeedBackdata] = useState(Data);
+
+    // const Addfeedback = (newFeedback) =>{
+    //     newFeedback.id = uuidv4();
+    //     SetFeedBackdata([newFeedback,...Feedbackdata]);
+    // }
     return(
-        <>
+      
+        <FeedbackProvider>
         <Header ></Header>
+
         <div className="container">
-
-            <FeedbackList feedback = {Feedbackdata} handleDelete={deleteFeedBack} />
-
-
+            <FeedbackForm />
+            <Feedbackstats>
+            </Feedbackstats>
+            <FeedbackList />
+            {/* <Link to='/about'>About</Link> */}
+            {/* <Routes>
+            <Route path ='/about'>This is the about Route</Route>
+            </Routes> */}
+            <Post/>
+            <AboutIconLink />
         </div>
-        </>
+        
+        </FeedbackProvider>
     );
 }
 

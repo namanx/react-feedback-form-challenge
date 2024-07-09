@@ -165,11 +165,11 @@ input:focus {
   cursor: pointer;
 }
 
-.btn-primary {
+.primary {
   background-color: #202142;
 }
 
-.btn-secondary {
+.secondary {
   background: #ff6a95;
 }
 
