@@ -1,0 +1,34 @@
+{
+  "feedback": [
+    {
+      "id": "1",
+      "rating": 10,
+      "text": "This is the text from json-server"
+    },
+    {
+      "text": "This is the text from json-server feeback 2 and I am modifying it",
+      "rating": 9,
+      "id": "2"
+    },
+    {
+      "id": "6f95",
+      "rating": 10,
+      "text": "New Feedback by postman part 1"
+    },
+    {
+      "id": "8f48",
+      "text": "ovhpijpirhpd vid9jdihvndffb",
+      "rating": 10
+    },
+    {
+      "id": "debd",
+      "text": "hey wassup how are you !",
+      "rating": 10
+    },
+    {
+      "id": "3fb8",
+      "text": "wefwegvwedfwev",
+      "rating": 7
+    }
+  ]
+}
